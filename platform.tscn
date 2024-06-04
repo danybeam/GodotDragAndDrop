@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgpgrnby7h16c"]
+
+[ext_resource type="Script" path="res://platform.gd" id="1_1e1qs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_187ki"]
+size = Vector2(128, 128)
+
+[node name="platform" type="StaticBody2D" groups=["dropable"]]
+script = ExtResource("1_1e1qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_187ki")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
